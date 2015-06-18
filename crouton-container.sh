@@ -26,7 +26,7 @@ cat $base/config.json.template | \
 	     s#CROUTON_CONTAINER_CONSOLE_SECTION#$console_section#g" > $config
 
 ##FIXME
-#sudo rm -rf  /var/run/nsinit/
+sudo rm -rf  /var/run/nsinit/
 sudo /henri/nsinit exec \
 	--env container=nsinit \
 	--config $config \
