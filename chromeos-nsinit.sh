@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 base=$(readlink -f $(dirname $0))
-config=$(mktemp /tmp/crouton-container.XXX.json)
+config=$(mktemp /tmp/chromeos-nsinit.XXX.json)
 rootfs="/mnt/stateful_partition/crouton/chroots/$1"
 name="$(basename $rootfs)"
 hostname=$name
@@ -27,7 +27,7 @@ cat $base/config.json.template | \
 
 ##FIXME
 sudo rm -rf  /var/run/nsinit/
-sudo /henri/nsinit exec \
+sudo $(dirname $0)/nsinit exec \
 	--env container=nsinit \
 	--config $config \
 	/usr/lib/systemd/systemd --system
