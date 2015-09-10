@@ -48,6 +48,16 @@
 			"postmount_cmds": null
 		},
 		{
+			"source": "mqueue",
+			"destination": "/dev/mqueue",
+			"device": "mqueue",
+			"flags": 14,
+			"data": "",
+			"relabel": "",
+			"premount_cmds": null,
+			"postmount_cmds": null
+		},
+		{
                         "source": "sysfs",
                         "destination": "/sys",
                         "device": "sysfs",
