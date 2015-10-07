@@ -8,6 +8,16 @@
 	"mounts": [
 		CROUTON_CONTAINER_CONSOLE_SECTION
 		{
+			"source": "/proc",
+			"destination": "/host/proc",
+                        "device": "bind",
+                        "flags": 20480,
+			"data": "",
+			"relabel": "",
+			"premount_cmds": null,
+			"postmount_cmds": null
+		},
+		{
 			"source": "proc",
 			"destination": "/proc",
 			"device": "proc",

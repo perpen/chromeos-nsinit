@@ -13,6 +13,7 @@ else
 fi
 
 rootfs="/mnt/stateful_partition/crouton/chroots/$1"
+#rootfs="/usr/local/chroots/$1"
 name="$(basename $rootfs)"
 hostname=$name
 
