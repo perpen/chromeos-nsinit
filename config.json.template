@@ -191,8 +191,8 @@
 	"rlimits": [
 		{
 			"type": 7,
-			"hard": 1024,
-			"soft": 1024
+			"hard": 2048,
+			"soft": 2048
 		}
 	],
 	"additional_groups": null,
